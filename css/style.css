@@ -101,6 +101,7 @@ nav:first-of-type .search-box input {
 input[type="search"] {
     font-size: 20px;
     color: var(--second-color);
+    padding-left: 20px;
 }
 
 input[type="search"]::placeholder {
@@ -272,7 +273,7 @@ nav:nth-of-type(2) h2 span {
 
 @media (max-width:768px) {
     nav:nth-of-type(2) {
-        top: 50%;
+        top: 30%;
         width: 80%;
     }
     .corona-box h2 {
@@ -521,6 +522,10 @@ nav:nth-of-type(2) h2 span {
     color: #000;
 }
 
+.title span {
+    font-size: 50px;
+}
+
 .Timeline .row {
     /* display: flex; */
 }
@@ -720,6 +725,10 @@ nav:nth-of-type(2) h2 span {
 
 .Contact h3 {
     padding: 10% 0 2% 0;
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 5%;
+    margin-right: 1%;
 }
 
 .Contact .col1 ul {
@@ -743,6 +752,37 @@ nav:nth-of-type(2) h2 span {
     font-size: 20px;
 }
 
+.Contact .col1 i {
+    transform: rotate(0deg);
+    animation: clock-anim 5s infinite;
+    color: var(--second-color);
+    font-size: 15px;
+    -webkit-animation: clock-anim 5s infinite;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+@keyframes clock-anim {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+.Contact .col1 i:nth-of-type(2) {
+    animation-direction: reverse;
+    color: var(--main-color);
+}
+
 .Contact .col2 {
     flex: 0 0 30%;
     max-width: 30%;
@@ -753,7 +793,8 @@ nav:nth-of-type(2) h2 span {
     line-height: 2;
     font-size: 12pt;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
+    /* width: 79%; */
 }
 
 .Contact .col2 p a {
@@ -762,7 +803,65 @@ nav:nth-of-type(2) h2 span {
 
 .Contact .col2 {}
 
+.Contact .col2 img {
+    width: 20px;
+    margin-left: 6%;
+    transform: rotateY(0deg);
+    animation: img-icon-anim 5s infinite;
+    -webkit-animation: img-icon-anim 5s infinite;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+
+@keyframes img-icon-anim {
+    0%,
+    100% {
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+        -o-transform: rotateY(360deg);
+    }
+}
+
 .Contact .col3 {}
+
+.Contact .col3 img {
+    width: 25px;
+    margin-left: 6%;
+    -webkit-animation: img-icon-anim2 5s infinite;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+@keyframes img-icon-anim2 {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
 
 .Contact .col3 p {
     font-size: 12pt;
