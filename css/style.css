@@ -442,6 +442,13 @@ nav:nth-of-type(2) h2 span {
     box-shadow: 0 0 30px var(--main-color);
 }
 
+@media (max-width:320px) {
+    .About .shape {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 .About .shape p {
     position: absolute;
     top: 50%;
@@ -508,14 +515,24 @@ nav:nth-of-type(2) h2 span {
         margin-top: calc(10% + 112px);
     }
     .Timeline .container {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, auto)
+        /* repeat(auto-fill, minmax(300px, 1fr)); */
+    }
+    @media (max-width:320px) {
+        .Timeline .container {
+            gap: unset;
+        }
     }
 }
 
 .title {
     margin: 0 auto;
     text-align: center;
-    transform: translateY(25px);
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
 }
 
 .title h2 {
@@ -634,7 +651,44 @@ nav:nth-of-type(2) h2 span {
     }
 }
 
-@media (max-width:600px) {}
+@media (max-width:500px) {
+    .Timeline .text p {
+        font-size: 15px;
+        transform: translateY(36%);
+        -webkit-transform: translateY(36%);
+        -moz-transform: translateY(36%);
+        -ms-transform: translateY(36%);
+        -o-transform: translateY(36%);
+    }
+    .Timeline .text::before {
+        content: "Mohamed-Karm";
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        left: 0;
+    }
+}
+
+@media (max-width:320px) {
+    .Timeline .text {
+        height: 200px;
+    }
+    .Timeline .text p {
+        font-size: 13px;
+        transform: translateY(29%);
+        -webkit-transform: translateY(29%);
+        -moz-transform: translateY(29%);
+        -ms-transform: translateY(29%);
+        -o-transform: translateY(29%);
+    }
+    .Timeline .title {
+        margin: 0 auto 25% 0;
+    }
+}
 
 .date {
     /* width: 50%; */
@@ -866,6 +920,16 @@ nav:nth-of-type(2) h2 span {
 .Contact .col3 p {
     font-size: 12pt;
     font-weight: bold;
+    border-bottom: 7px solid var(--second-color);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-top: 7px solid var(--main-color);
+    text-align: center;
+    align-items: center;
 }
 
 .Contact .col3 .icons {
